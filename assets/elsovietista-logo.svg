@@ -1,0 +1,19 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" fill="transparent"/>
+  <polygon points="320,30 500,160 530,350 320,520 110,350 140,160" fill="#b35a66"/>
+  <polygon points="320,30 140,160 110,350 320,520" fill="#2f2f34"/>
+  <polygon points="260,78 320,30 320,190 250,245" fill="#222227"/>
+  <polygon points="380,78 320,30 320,190 390,245" fill="#2a2a30"/>
+  <polygon points="128,350 24,462 320,620 320,510" fill="#2f2f34"/>
+  <polygon points="512,350 616,462 320,620 320,510" fill="#a85660"/>
+  <polygon points="320,190 500,350 320,510 140,350" fill="#070707" stroke="#b35a66" stroke-width="6"/>
+  <rect x="252" y="480" width="10" height="110" fill="#b35a66"/>
+  <rect x="378" y="480" width="10" height="110" fill="#2f2f34"/>
+  <rect x="312" y="492" width="16" height="8" fill="#2f2f34"/>
+  <rect x="312" y="510" width="16" height="8" fill="#2f2f34"/>
+  <rect x="312" y="528" width="16" height="8" fill="#2f2f34"/>
+  <rect x="312" y="546" width="16" height="8" fill="#2f2f34"/>
+  <rect x="312" y="564" width="16" height="8" fill="#2f2f34"/>
+  <rect x="312" y="582" width="16" height="8" fill="#2f2f34"/>
+  <rect x="312" y="600" width="16" height="8" fill="#2f2f34"/>
+</svg>
