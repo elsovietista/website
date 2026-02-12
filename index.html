@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>elsovietista | comunismo o extinción</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #050505;
+        --bg-soft: #101010;
+        --red: #ff0026;
+        --red-2: #ff1639;
+        --text: #f8f8f8;
+        --muted: #d1d1d1;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        background:
+          radial-gradient(circle at 18% 14%, #5c0015 0, transparent 34%),
+          radial-gradient(circle at 85% 20%, #3d0010 0, transparent 27%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .noise::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.06;
+        background-image: radial-gradient(#fff 0.4px, transparent 0.4px);
+        background-size: 3px 3px;
+        z-index: 0;
+      }
+
+      .container { position: relative; z-index: 1; width: min(1100px, 92%); margin: 0 auto; }
+
+      header {
+        min-height: 82vh;
+        display: grid;
+        place-items: center;
+        border-bottom: 1px solid #2c2c2c;
+      }
+
+      .hero { text-align: center; }
+
+      .logo {
+        width: 98px;
+        height: 98px;
+        border: 2px solid var(--red-2);
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 1.2rem;
+        background: linear-gradient(140deg, #180606, #300a0f);
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        box-shadow: 0 0 30px #ff002666;
+      }
+
+      .tag {
+        color: var(--red-2);
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 1.6px;
+      }
+
+      h1, h2, h3 {
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      h1 { font-size: clamp(2rem, 5vw, 4rem); }
+
+      .terminal-slogan {
+        margin: 0.7rem auto 1.4rem;
+        font-family: 'Share Tech Mono', monospace;
+        color: var(--red);
+        font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+        text-shadow: 0 0 16px #ff002655;
+        min-height: 1.8em;
+      }
+
+      .typing-line {
+        max-width: 900px;
+        margin: 0 auto;
+        font-family: 'Share Tech Mono', monospace;
+        color: var(--muted);
+        min-height: 4.5em;
+      }
+
+      .cursor { display: inline-block; width: 10px; animation: blink 0.9s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+
+      main { padding: 3rem 0 5rem; }
+
+      section {
+        margin-bottom: 2rem;
+        padding: 2rem;
+        border: 1px solid #2a2a2a;
+        border-radius: 20px;
+        background: linear-gradient(145deg, #0d0d0d, #111111);
+      }
+
+      .section-title { margin-bottom: 1rem; color: var(--red); }
+
+      .embed-wrap {
+        margin-top: 1rem;
+        width: 100%;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid #3a3a3a;
+        background: var(--bg-soft);
+      }
+
+      iframe { display: block; width: 100%; border: none; }
+
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .socials, .user-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .8rem;
+        margin-top: 1rem;
+      }
+
+      .chip {
+        text-decoration: none;
+        color: var(--text);
+        border: 1px solid var(--red);
+        border-radius: 999px;
+        padding: 0.55rem 1rem;
+        transition: all .2s ease;
+        font-family: 'Share Tech Mono', monospace;
+      }
+
+      .chip:hover { background: var(--red); transform: translateY(-2px); }
+
+      .subtle { color: #bbbbbb; margin-top: 1rem; }
+
+      form { display: grid; gap: 1rem; margin-top: 1rem; }
+
+      input, textarea, button {
+        width: 100%;
+        border: 1px solid #363636;
+        border-radius: 10px;
+        padding: .75rem .9rem;
+        font-family: inherit;
+        font-size: 1rem;
+        background: #0f0f0f;
+        color: var(--text);
+      }
+
+      button {
+        font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, var(--red), #bd001c);
+        border-color: transparent;
+        cursor: pointer;
+      }
+
+      footer { text-align: center; color: #a6a6a6; padding: 1rem 0 2rem; font-size: .95rem; }
+    </style>
+  </head>
+  <body class="noise">
+    <header>
+      <div class="container hero">
+        <div class="logo" aria-label="Logo temporal de elsovietista">ESV</div>
+        <p class="tag">perfil oficial</p>
+        <h1>/ELSOVIETISTA</h1>
+        <p class="terminal-slogan" id="slogan-typing"></p>
+        <p class="typing-line" id="typing"></p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="quien-soy">
+        <h2 class="section-title">¿Quién soy?</h2>
+        <p>
+          Creador del ChatPTS. Debato sobre inteligencia artificial, algoritmos,
+          planificación democrática, plataformas, cripto y mucho más. Con el objetivo de
+          aportar ideas para un futuro socialista.
+        </p>
+      </section>
+
+      <section id="articulos">
+        <h2 class="section-title">Artículos | La Izquierda Diario</h2>
+        <p>Acá podés leer los artículos publicados en La Izquierda Diario.</p>
+        <div class="embed-wrap">
+          <iframe
+            src="https://www.laizquierdadiario.com/El-Sovietista"
+            title="Artículos de El Sovietista"
+            height="500"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="youtube">
+        <h2 class="section-title">Canal de YouTube</h2>
+        <p>
+          Seguime en
+          <a href="https://www.youtube.com/@elsovietista" target="_blank" rel="noreferrer" style="color: var(--red)">@elsovietista</a>.
+          Últimos episodios embebidos:
+        </p>
+        <div class="video-grid">
+          <div class="embed-wrap">
+            <iframe
+              height="220"
+              src="https://www.youtube.com/embed?listType=playlist&list=UUw4RaqqAEmVV5duL5M6rA7A"
+              title="Últimos videos de elsovietista"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="embed-wrap">
+            <iframe
+              height="220"
+              src="https://www.youtube.com/embed/videoseries?list=UUw4RaqqAEmVV5duL5M6rA7A&index=2"
+              title="Episodio 2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="embed-wrap">
+            <iframe
+              height="220"
+              src="https://www.youtube.com/embed/videoseries?list=UUw4RaqqAEmVV5duL5M6rA7A&index=3"
+              title="Episodio 3"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="redes">
+        <h2 class="section-title">Redes</h2>
+        <div class="socials">
+          <a class="chip" href="https://www.instagram.com/elsovietista" target="_blank" rel="noreferrer">Instagram /elsovietista</a>
+          <a class="chip" href="https://www.tiktok.com/@elsovietista" target="_blank" rel="noreferrer">TikTok /elsovietista</a>
+          <a class="chip" href="https://www.youtube.com/@elsovietista" target="_blank" rel="noreferrer">YouTube /@elsovietista</a>
+        </div>
+        <p class="subtle">Opciones alternativas de usuario (con / al inicio):</p>
+        <div class="user-options">
+          <span class="chip">/elsovietista_</span>
+          <span class="chip">/el.sovietista</span>
+          <span class="chip">/sovietista.tech</span>
+        </div>
+      </section>
+
+      <section id="sumate">
+        <h2 class="section-title">Sumate</h2>
+        <p>Dejá tus datos para contactarte y construir comunidad.</p>
+        <form>
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="text" name="ubicacion" placeholder="¿Dónde vivís?" required />
+          <textarea name="interes" rows="4" placeholder="¿Qué te interesa?" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>elsovietista — comunismo o extinción.</footer>
+
+    <script>
+      function typeText(target, text, speed, done) {
+        let idx = 0;
+        function step() {
+          if (idx <= text.length) {
+            target.innerHTML = `${text.slice(0, idx)}<span class="cursor">█</span>`;
+            idx += 1;
+            setTimeout(step, speed);
+          } else if (done) {
+            done();
+          }
+        }
+        step();
+      }
+
+      const sloganTarget = document.getElementById('slogan-typing');
+      const descTarget = document.getElementById('typing');
+      const description =
+        '> Creador del ChatPTS. Debato sobre inteligencia artificial, algoritmos, planificación democrática, plataformas, cripto y mucho más.\\n> Objetivo: aportar ideas para un futuro socialista.';
+
+      typeText(sloganTarget, 'comunismo o extinción', 85, () => {
+        let idx = 0;
+        function typeDescription() {
+          if (idx <= description.length) {
+            const content = description.slice(0, idx).replace('\\n', '<br>');
+            descTarget.innerHTML = `${content}<span class="cursor">█</span>`;
+            idx += 1;
+            setTimeout(typeDescription, 20);
+          }
+        }
+        typeDescription();
+      });
+    </script>
+  </body>
+</html>
